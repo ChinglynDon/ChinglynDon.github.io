@@ -1350,3 +1350,6 @@ body.dark-theme .highlight .code .deletion,
 body.dark-theme .highlight .code .meta {
   color: #7f7f7f;
 }
+header .menu a {
+  font-size: 16px;
+}
