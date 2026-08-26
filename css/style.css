@@ -176,9 +176,37 @@ template {
   font-weight: 700;
   font-style: italic;
   font-display: swap;
+  @font-face {
+    font-family: 'eb-garamond';
+    src: url("../fonts/EG-Garamond/EBGaramond-Regular.woff2") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'eb-garamond';
+    src: url("../fonts/EG-Garamond/EBGaramond-Italic.woff2") format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'eb-garamond';
+    src: url("../fonts/EG-Garamond/EBGaramond-Bold.woff2") format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'eb-garamond';
+    src: url("../fonts/EG-Garamond/EBGaramond-BoldItalic.woff2") format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
 }
 html {
-  font-family: 'new-caledonia', 'Songti SC', SimSun, serif;
+  font-family: 'eb-garamond', 'Songti SC', SimSun, serif;
 }
 html::-webkit-scrollbar {
   width: 8px;
@@ -466,8 +494,28 @@ header .menu label {
   margin-left: 15px;
   position: relative;
 }
+.contact {
+  text-align: center;
+}
+.contact-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0 0 5px;
+  line-height: 1.3;
+}
+.contact-email {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.contact-email a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
 .copyright {
-  font-size: 14px;
+  font-size: 18px;
 }
 .pagination {
   display: flex;
@@ -544,51 +592,52 @@ header .menu label {
   width: 60%;
 }
 .profile-container {
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 150px;
+  margin-top: 40px;
 }
 .intro {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 240px;
 }
 .intro .avatar {
   padding: 10px;
+  flex-shrink: 0;
+  transform: translateY(-20px);
 }
 .intro .avatar img {
-  width: 128px;
+  width: 260px;
   height: auto;
-  display: inline-block;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  -webkit-box-shadow: 0 0 0 0.3618em rgba(0,0,0,0.05);
-  box-shadow: 0 0 0 0.3618em rgba(0,0,0,0.05);
-  margin: 0 auto;
-  -webkit-transition: all ease 0.4s;
-  -moz-transition: all ease 0.4s;
-  -o-transition: all ease 0.4s;
+  display: block;
+  border-radius: 0;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
   transition: all ease 0.4s;
   cursor: pointer;
 }
 .intro .avatar img:hover {
-  position: relative;
-  -webkit-transform: translateY(-0.75em);
-  -moz-transform: translateY(-0.75em);
-  -ms-transform: translateY(-0.75em);
-  -o-transform: translateY(-0.75em);
-  transform: translateY(-0.75em);
-  cursor: pointer;
+  transform: none;
+}
+.intro .intro-text {
+  max-width: 450px;
+  font-size: 16px;
+  text-align: left;
+  padding-top: 15px;
 }
 .nickname {
   font-size: 2em;
   font-weight: normal;
+  margin-bottom: 15px;
 }
-.links a {
-  padding: 0 5px;
+.nickname .description {
+  line-height: 1.8;
 }
-.links a:hover {
-  background-color: transparent;
-}
-.links .iconfont {
-  font-size: 2em;
+.nickname .description p {
+  margin-bottom: 15px;
 }
 .post-wrap {
   position: relative;
@@ -1350,6 +1399,12 @@ body.dark-theme .highlight .code .deletion,
 body.dark-theme .highlight .code .meta {
   color: #7f7f7f;
 }
+header .header-logo a {
+  font-family: "new-caledonia", serif !important;
+  font-size: 26px;
+  font-weight: 400;
+}
 header .menu a {
-  font-size: 16px;
+  font-size: 22px;
+  padding: 0 14px;
 }

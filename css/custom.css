@@ -1,3 +1,9 @@
+header .header-logo a {
+  font-family: "new-caledonia", serif !important;
+  font-size: 26px;
+  font-weight: 400;
+}
 header .menu a {
-  font-size: 16px;
+  font-size: 22px;
+  padding: 0 14px;
 }
