@@ -1,7 +1,7 @@
 /* mobile phone and smart portable devices */
 @media screen and (max-width: 479px) {
   .main {
-    padding-top: 40pt;
+    padding-top: 80px !important /* 适当增大顶部内边距，防止固定导航栏遮挡正文 */;
   }
   .navbar {
     display: none !important /* 强制隐藏桌面端导航 */;
@@ -86,14 +86,14 @@
     padding: 1.5em 1.5em /* 左侧和上方整体边距 */;
     user-select: none;
     box-shadow: none;
-/* 点击展开后的覆盖样式 */
+/* 点击展开后的覆盖样式（九宫格 4 号位：垂直居中 + 水平靠左） */
 /* 菜单项（紧凑+无下划线） */
   }
   .navbar-mobile .container .menu.active {
     display: flex !important /* 点开时显示 */;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start /* 关键点：左对齐 */;
+    justify-content: center /* 垂直居中 */;
+    align-items: flex-start /* 水平靠左 */;
     position: fixed;
     top: 5.5em;
     left: 0;
@@ -143,6 +143,59 @@
   .intro-text {
     max-width: 90%;
     padding-top: 0;
+  }
+  .archive-year,
+  .year,
+  h2.archive-year {
+    margin-top: 2.5em !important /* 与上方内容拉开距离 */;
+    margin-bottom: 1.2em !important /* 与下方第一篇文章拉开距离 */;
+    font-size: 1.6rem !important;
+    font-weight: 700;
+  }
+  .post-list,
+  .archive-list {
+    padding-right: 12px !important /* 确保右侧留有安全内边距 */;
+    box-sizing: border-box !important;
+  }
+  .post-item,
+  .archive-item,
+  .post-list-item {
+    display: flex !important;
+    flex-direction: column !important /* 移动端强制上下分行 */;
+    align-items: flex-start !important;
+    margin-bottom: 1.8em !important /* 增加每篇文章之间的间距 */;
+    width: 100% !important;
+    box-sizing: border-box !important;
+/* 文章标题 */
+/* 右侧/下方日期（解决贴靠右侧被遮挡问题） */
+  }
+  .post-item .post-title,
+  .archive-item .post-title,
+  .post-list-item .post-title,
+  .post-item .post-item-title,
+  .archive-item .post-item-title,
+  .post-list-item .post-item-title,
+  .post-item a,
+  .archive-item a,
+  .post-list-item a {
+    font-size: 1.1rem !important;
+    line-height: 1.4em !important;
+    margin-bottom: 6px !important;
+    word-break: break-word /* 长标题自动折行 */;
+  }
+  .post-item .post-date,
+  .archive-item .post-date,
+  .post-list-item .post-date,
+  .post-item .date,
+  .archive-item .date,
+  .post-list-item .date,
+  .post-item time,
+  .archive-item time,
+  .post-list-item time {
+    font-size: 0.85rem !important /* 缩小字号 */;
+    color: #888 !important /* 柔和灰色 */;
+    margin-left: 0 !important /* 清空左边距 */;
+    margin-right: 8px !important /* 右侧安全保护边距，绝不贴边 */;
   }
 }
 /* iPads (portrait and landscape) ----------- */
