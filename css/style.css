@@ -1325,7 +1325,7 @@ header .menu label {
   .archive-year,
   .year,
   h2.archive-year {
-    margin-top: 2.5em !important /* 与上方内容拉开距离 */;
+    margin-top: 2em !important /* 与上方内容拉开距离 */;
     margin-bottom: 1.2em !important /* 与下方第一篇文章拉开距离 */;
     margin-left: 25px !important /* 调整为合理的 25px 边距 */;
     font-size: 1.6rem !important;
