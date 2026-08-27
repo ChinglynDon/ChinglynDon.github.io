@@ -94,9 +94,11 @@
     background: $dark-background-color !important;
   }
   .intro {
+    display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
+    justify-content: center;
   }
   .avatar {
     transform: translateY(0);
