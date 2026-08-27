@@ -516,6 +516,7 @@ header .menu label {
 }
 .copyright {
   font-size: 18px;
+  padding-bottom: 40px;
 }
 .pagination {
   display: flex;
