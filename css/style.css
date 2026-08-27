@@ -1163,34 +1163,41 @@ header .menu label {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end /* 右对齐，好看且利落 */;
     cursor: pointer;
     user-select: none;
     width: 40px;
     height: 5.5em;
+    position: relative;
   }
   .navbar .navbar-mobile .container .navbar-header .menu-toggle .menu-icon,
-  .navbar .navbar-mobile .container .navbar-header .menu-toggle .close-icon {
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle .close-icon,
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle svg {
     display: none !important;
   }
   .navbar .navbar-mobile .container .navbar-header .menu-toggle::before,
   .navbar .navbar-mobile .container .navbar-header .menu-toggle::after {
     content: "";
     display: block;
-    width: 36px;
-    height: 2px;
-    background-color: currentColor;
-    transition: transform 0.3s ease;
+    width: 36px /* 线的长度：可自由修改，如 38px */;
+    height: 1.5px /* 线的粗细：1.5px 极细 */;
+    background-color: #333 !important /* 强制指定颜色，防止渲染透明 */;
+    flex-shrink: 0 /* 关键：防止 Flexbox 将线压缩看不见 */;
+    transition: all 0.25s ease;
   }
   .navbar .navbar-mobile .container .navbar-header .menu-toggle::before {
-    margin-bottom: 6px;
+    margin-bottom: 7px /* 两线间距 */;
   }
   .navbar .navbar-mobile .container .navbar-header .menu-toggle.active::before {
-    transform: translateY(4px) rotate(45deg);
+    transform: translateY(4.25px) rotate(45deg);
     margin-bottom: 0;
   }
   .navbar .navbar-mobile .container .navbar-header .menu-toggle.active::after {
-    transform: translateY(-4px) rotate(-45deg);
+    transform: translateY(-4.25px) rotate(-45deg);
+  }
+  .dark-theme .navbar .navbar-mobile .container .navbar-header .menu-toggle::before,
+  .dark-theme .navbar .navbar-mobile .container .navbar-header .menu-toggle::after {
+    background-color: #fff !important;
   }
   .navbar .navbar-mobile .menu {
     text-align: left;
