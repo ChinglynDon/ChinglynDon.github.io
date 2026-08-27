@@ -66,10 +66,10 @@
     margin-bottom: 8px /* 两线间距 */;
   }
   .navbar-mobile .container .navbar-header .menu-toggle.active::before {
-    transform: translateY(0) rotate(45deg);
+    transform: rotate(45deg);
   }
   .navbar-mobile .container .navbar-header .menu-toggle.active::after {
-    transform: translateY(0) rotate(-45deg);
+    transform: rotate(-45deg);
   }
   .navbar-mobile .container .menu {
     display: none !important /* 默认绝对隐藏，不占页面位置 */;
