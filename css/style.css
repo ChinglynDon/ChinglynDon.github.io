@@ -476,19 +476,34 @@ label:active:after {
 header {
   user-select: none;
 }
+header .header-logo {
+  margin-left: -10px /* 往右移动 10px（数值越大越靠右） */;
+/* margin-left -10px */
+/* 如果想往左靠，可以用负数 */
+}
 header .menu {
   display: flex;
   align-items: center;
 }
 header .menu a {
-  padding: 0 8px;
+  display: inline-block;
+  width: fit-content;
+  flex: none;
+  margin: 0 20px;
+  padding: 0 !important;
+  position: relative;
+  color: inherit;
+  line-height: 1.2;
+/* 只有当前页面 (active) 才加上 1.5px 极细下划线 */
 }
-header .menu a .active {
-  font-weight: 900;
-  color: #161209;
-}
-.dark-theme header .menu a .active {
-  color: #fff;
+header .menu a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: currentColor;
 }
 header .menu label {
   margin-left: 15px;
