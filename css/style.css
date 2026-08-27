@@ -1218,32 +1218,40 @@ header .menu label {
     transform: rotate(-45deg) translate(8px, -10px);
   }
   .navbar-mobile .container .menu {
-    text-align: center;
+    text-align: left;
     background: #fbfbfb;
-    border-top: 1px solid #000;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    border-top: none;
+    padding: 3em 1.5em;
     user-select: none;
     display: none;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.1), 0px 4px 8px rgba(0,0,0,0.1);
+    box-shadow: none;
+/* 核心修改：实现全屏覆盖 */
+    position: fixed;
+    top: 5.5em /* 紧接在顶部 Header 下方 */;
+    left: 0;
+    width: 100vw /* 宽度占满手机屏幕 */;
+    height: calc(100vh - 5.5em) /* 高度铺满屏幕剩余区域 */;
+    z-index: 99 /* 层级盖住网页正文 */;
+    box-sizing: border-box;
+    overflow-y: auto /* 内容超出时允许滚动 */;
   }
   .navbar-mobile .container .menu a {
     display: block !important;
     width: 100%;
     margin: 0;
-    line-height: 2.5em;
+    line-height: 2.2em /* 增大行距 */;
+    font-size: 2.2rem /* 放大字号，对齐截图效果 */;
+    font-weight: 500;
+    color: inherit;
   }
   .navbar-mobile .container .menu.active {
-    display: block;
-    white-space: normal;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   .dark-theme .navbar-mobile .container .menu {
     background: #292a2d;
-    border-top: 2px solid #87878d;
-  }
-  .dark-theme .navbar-mobile {
-    background: #292a2d !important;
+    border-top: none;
   }
   .intro {
     display: flex;
