@@ -1218,11 +1218,18 @@ header .menu label {
   .navbar-mobile .container .navbar-header .menu-toggle::before {
     margin-bottom: 8px /* 两线间距 */;
   }
+  .navbar-mobile .container .navbar-header .menu-toggle.active::before,
+  .navbar-mobile .container .navbar-header .menu-toggle.active::after {
+    position: absolute;
+    top: 50%;
+    left: calc(50% -18px);
+    margin: 0 !important;
+  }
   .navbar-mobile .container .navbar-header .menu-toggle.active::before {
-    transform: translateY(4.75px) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
   }
   .navbar-mobile .container .navbar-header .menu-toggle.active::after {
-    transform: translateY(-4.75px) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
   }
   .navbar-mobile .container .menu {
     display: none !important /* 默认绝对隐藏，不占页面位置 */;
