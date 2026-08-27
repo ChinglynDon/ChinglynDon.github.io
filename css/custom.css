@@ -7,3 +7,13 @@ header .menu a {
   font-size: 22px;
   padding: 0 14px;
 }
+.headerlink,
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  display: none !important;
+  content: "" !important;
+}
