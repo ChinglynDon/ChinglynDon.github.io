@@ -1384,6 +1384,9 @@ header .menu label {
     text-align: left !important;
     word-break: break-word !important;
   }
+  #mobile-toggle-theme {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 1023px) {
   .navbar-mobile {
