@@ -1189,7 +1189,7 @@ header .menu label {
     margin: 0;
     line-height: 5.5em;
     background: #fbfbfb;
-/* 核心修复：移动端下拉菜单默认必须彻底隐藏 */
+/* 移动端下拉菜单 */
   }
   .navbar-mobile .container .navbar-header {
     display: flex;
@@ -1237,7 +1237,7 @@ header .menu label {
   .navbar-mobile .container .navbar-header .menu-toggle.active::after {
     position: absolute;
     top: 50%;
-    left: calc(50% -18px);
+    left: calc(50% - 18px);
     margin: 0 !important;
   }
   .navbar-mobile .container .navbar-header .menu-toggle.active::before {
@@ -1247,19 +1247,21 @@ header .menu label {
     transform: translateY(-50%) rotate(-45deg);
   }
   .navbar-mobile .container .menu {
-    display: none !important /* 默认绝对隐藏，不占页面位置 */;
+    display: none !important /* 默认绝对隐藏 */;
     text-align: left;
     background: #fbfbfb;
     border-top: none;
-    padding: 2em 1.5em;
+    padding: 1.5em 1.5em /* 左侧和上方整体边距 */;
     user-select: none;
     box-shadow: none;
-/* 点击两横杠展开后的全屏覆盖样式 */
+/* 点击展开后的覆盖样式 */
+/* 菜单项（紧凑+无下划线） */
   }
   .navbar-mobile .container .menu.active {
-    display: flex !important /* 只有点开时才显示 */;
+    display: flex !important /* 点开时显示 */;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start /* 关键点：左对齐 */;
     position: fixed;
     top: 5.5em;
     left: 0;
@@ -1271,26 +1273,17 @@ header .menu label {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .navbar-mobile .container .menu.active a {
-    display: inline-block !important /* 改为 inline-block */;
-    width: fit-content !important /* 宽度自适应文字长度 */;
-    margin: 6px 0 !important /* 缩小上下间距，更紧凑 */;
-    padding: 0 !important /* 清空内边距，保证横线不超长 */;
+  .navbar-mobile .container .menu a {
+    display: inline-block !important;
+    width: fit-content !important;
+    margin: 4px 0 !important /* 间距缩到 4px，极其紧凑 */;
+    padding: 0 !important;
     line-height: 1.2em /* 紧凑行高 */;
-    font-size: 1.3rem !important /* 缩小字号 */;
+    font-size: 1.2rem !important /* 精致小字号 */;
     font-weight: 500;
     color: inherit;
-    position: relative /* 配合下划线定位 */;
-/* 选中态精准下划线 */
-  }
-  .navbar-mobile .container .menu.active a.active::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 1.5px;
-    background-color: currentColor;
+    position: relative;
+/* 已彻底移除 &.active 下划线样式 */
   }
   .dark-theme .navbar-mobile {
     background: #292a2d !important;
