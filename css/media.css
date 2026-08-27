@@ -103,14 +103,26 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .navbar-mobile .container .menu a {
-    display: block !important;
-    width: 100%;
-    margin: 0;
-    line-height: 2.2em;
-    font-size: 2.2rem /* 大字号艺术排版 */;
+  .navbar-mobile .container .menu.active a {
+    display: inline-block !important /* 改为 inline-block */;
+    width: fit-content !important /* 宽度自适应文字长度 */;
+    margin: 6px 0 !important /* 缩小上下间距，更紧凑 */;
+    padding: 0 !important /* 清空内边距，保证横线不超长 */;
+    line-height: 1.2em /* 紧凑行高 */;
+    font-size: 1.3rem !important /* 缩小字号 */;
     font-weight: 500;
     color: inherit;
+    position: relative /* 配合下划线定位 */;
+/* 选中态精准下划线 */
+  }
+  .navbar-mobile .container .menu.active a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: currentColor;
   }
   .dark-theme .navbar-mobile {
     background: $dark-background-color !important;
