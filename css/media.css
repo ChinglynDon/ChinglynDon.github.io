@@ -32,38 +32,102 @@
   }
   .navbar-mobile .container .navbar-header .menu-toggle {
     display: flex;
+    flex-direction: column /* 上下排列两根横线 */;
+    justify-content: center /* 垂直居中 */;
+    align-items: center;
     cursor: pointer;
-    line-height: 5.5em;
     user-select: none;
+    width: 40px /* 控制图标区域宽度 */;
+    height: 5.5em;
+/* 清除原来的 SVG 图标 */
   }
-  .navbar-mobile .container .navbar-header .menu-toggle .menu-icon {
-    display: block;
+  .navbar-mobile .container .navbar-header .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon {
+    display: none !important;
+/* 纯 CSS 绘制加长的两根横线 */
   }
-  .navbar-mobile .container .navbar-header .menu-toggle .close-icon {
+  .navbar-mobile .container .navbar-header .menu-icon::before .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon::before .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon::after .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon::after .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon content "" .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon content "" .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon display block .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon display block .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon width 36px .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon width 36px .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon height 2px .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon height 2px .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon background-color currentColor .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon background-color currentColor .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon transition transform 0.3s ease .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon transition transform 0.3s ease .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon margin 0.3s ease .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon margin 0.3s ease .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon margin-bottom 4px .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon margin-bottom 4px .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon.active .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon.active .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon transform translateY(3px) rotate(45deg) .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon transform translateY(3px) rotate(45deg) .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon margin-bottom 0 .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon margin-bottom 0 .menu-icon,
+  .navbar-mobile .container .navbar-header .menu-icon transform translateY(-3px) rotate(-45deg) .menu-icon,
+  .navbar-mobile .container .navbar-header .close-icon transform translateY(-3px) rotate(-45deg) .menu-icon {
     display: none;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active .menu-icon {
-    display: none;
-  }
-  .navbar-mobile .container .navbar-header .menu-toggle.active .close-icon {
+  .navbar-mobile .container .navbar-header .menu-icon::before .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon::before .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon::after .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon::after .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon content "" .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon content "" .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon display block .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon display block .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon width 36px .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon width 36px .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon height 2px .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon height 2px .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon background-color currentColor .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon background-color currentColor .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon transition transform 0.3s ease .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon transition transform 0.3s ease .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon margin 0.3s ease .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon margin 0.3s ease .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon margin-bottom 4px .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon margin-bottom 4px .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon.active .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon.active .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon transform translateY(3px) rotate(45deg) .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon transform translateY(3px) rotate(45deg) .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon margin-bottom 0 .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon margin-bottom 0 .close-icon,
+  .navbar-mobile .container .navbar-header .menu-icon transform translateY(-3px) rotate(-45deg) .close-icon,
+  .navbar-mobile .container .navbar-header .close-icon transform translateY(-3px) rotate(-45deg) .close-icon {
     display: block;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(1) {
+  .navbar-mobile .container .navbar-header .menu-icon span:nth-child(1),
+  .navbar-mobile .container .navbar-header .close-icon span:nth-child(1) {
     margin-bottom: 8px;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(3) {
+  .navbar-mobile .container .navbar-header .menu-icon span:nth-child(3),
+  .navbar-mobile .container .navbar-header .close-icon span:nth-child(3) {
     margin-top: 8px;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active span {
+  .navbar-mobile .container .navbar-header .menu-icon.active span,
+  .navbar-mobile .container .navbar-header .close-icon.active span {
     transition: 0.25s margin, 0.25s transform 0.25s;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(1) {
+  .navbar-mobile .container .navbar-header .menu-icon.active span:nth-child(1),
+  .navbar-mobile .container .navbar-header .close-icon.active span:nth-child(1) {
     transform: rotate(45deg) translate(4px, 6px);
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(2) {
+  .navbar-mobile .container .navbar-header .menu-icon.active span:nth-child(2),
+  .navbar-mobile .container .navbar-header .close-icon.active span:nth-child(2) {
     opacity: 0;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(3) {
+  .navbar-mobile .container .navbar-header .menu-icon.active span:nth-child(3),
+  .navbar-mobile .container .navbar-header .close-icon.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -10px);
   }
   .navbar-mobile .container .menu {
