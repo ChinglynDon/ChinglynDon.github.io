@@ -93,18 +93,18 @@
   .dark-theme .navbar-mobile {
     background: $dark-background-color !important;
   }
-  .navbar-mobile .intro {
+  .intro {
     flex-direction: column;
     gap: 30px;
     align-items: center;
   }
-  .navbar-mobile .avatar {
+  .avatar {
     transform: translateY(0);
   }
-  .navbar-mobile .avatar img {
+  .avatar img {
     width: 200px;
   }
-  .navbar-mobile .intro-text {
+  .intro-text {
     max-width: 90%;
     padding-top: 0;
   }
