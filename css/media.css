@@ -1,5 +1,5 @@
 /* mobile phone and smart portable devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 479px) {
   .main {
     padding-top: 40pt;
   }
@@ -116,19 +116,6 @@
     max-width: 90%;
     padding-top: 0;
   }
-}
-.profile-container .intro {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 30px !important;
-}
-.profile-container .avatar {
-  transform: translateY(0) !important;
-}
-.profile-container .intro-text {
-  max-width: 85% !important;
-  padding-top: 0 !important;
 }
 .archive {
   width: 90%;
