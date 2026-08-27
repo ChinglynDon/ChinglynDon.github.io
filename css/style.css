@@ -1219,10 +1219,11 @@ header .menu label {
     margin-bottom: 8px /* 两线间距 */;
   }
   .navbar-mobile .container .navbar-header .menu-toggle.active::before {
-    transform: rotate(45deg);
+    transform: translateY(4.75px) rotate(45deg);
+    margin-bottom: 0 !important;
   }
   .navbar-mobile .container .navbar-header .menu-toggle.active::after {
-    transform: rotate(-45deg);
+    transform: translateY(-4.75px) rotate(-45deg);
   }
   .navbar-mobile .container .menu {
     display: none !important /* 默认绝对隐藏，不占页面位置 */;
