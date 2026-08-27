@@ -1274,6 +1274,18 @@ header .menu label {
   .navbar-mobile .archive .archive-item .archive-item-date {
     display: none;
   }
+  .navbar-mobile .navbar-mobile .menu,
+  .navbar-mobile .navbar-mobile.active {
+    display: block;
+    white-space: normal;
+    overflow: hidden;
+  }
+  .navbar-mobile .navbar-mobile a {
+    display: block !important;
+    width: 100%;
+    margin: 0 !important;
+    line-height: 2.5em;
+  }
   .navbar-mobile #dynamic-to-top {
     display: none !important;
   }
