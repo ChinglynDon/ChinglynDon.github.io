@@ -1,5 +1,5 @@
 /* mobile phone and smart portable devices */
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 768px) {
   .main {
     padding-top: 40pt;
   }
@@ -93,20 +93,22 @@
   .dark-theme .navbar-mobile {
     background: $dark-background-color !important;
   }
-  .intro {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
+  .dark-theme .navbar-mobile .profile-container .intro {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
-  .avatar {
-    transform: translateY(0);
+  .dark-theme .navbar-mobile .profile-container .avatar {
+    transform: translateY(0) !important;
   }
-  .avatar img {
-    width: 200px;
+  .dark-theme .navbar-mobile .profile-container .avatar img {
+    width: 200px !important;
   }
-  .intro-text {
-    max-width: 90%;
-    padding-top: 0;
+  .dark-theme .navbar-mobile .profile-container .intro-text {
+    max-width: 85% !important;
+    padding-top: 0 !important;
   }
   .archive {
     width: 90%;
