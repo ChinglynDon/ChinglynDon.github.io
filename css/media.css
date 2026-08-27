@@ -1,3 +1,4 @@
+/* 2. 手机端样式：自动切换为垂直排列 */
 /* mobile phone and smart portable devices */
 @media screen and (max-width: 479px) {
   .main {
@@ -95,16 +96,18 @@
   }
   .intro {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: column /* 手机排版：上下垂直排列 */;
+    gap: 24px /* 手机端间距缩小 */;
     align-items: center;
     justify-content: center;
+    text-align: center /* 手机端文字居中显示，体验更好 */;
   }
   .avatar {
     transform: translateY(0);
   }
   .avatar img {
-    width: 200px;
+    width: 160px /* 手机端适当缩小图片尺寸 */;
+    height: auto;
   }
   .intro-text {
     max-width: 90%;
