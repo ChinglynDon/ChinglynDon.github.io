@@ -1,124 +1,163 @@
-.menu-toggle {
-  display: flex;
-  cursor: pointer;
-  line-height: 5.5em;
-  user-select: none;
-/* mobile homepage layout */
-}
-.menu-toggle .menu-icon {
-  display: block;
-}
-.menu-toggle .close-icon {
-  display: none;
-}
-.menu-toggle.active .menu-icon {
-  display: none;
-}
-.menu-toggle.active .close-icon {
-  display: block;
-}
-.menu-toggle span:nth-child(1) {
-  margin-bottom: 8px;
-}
-.menu-toggle span:nth-child(3) {
-  margin-top: 8px;
-}
-.menu-toggle.active span {
-  transition: 0.25s margin, 0.25s transform 0.25s;
-}
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(4px, 6px);
-}
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -10px);
-}
-.menu-toggle .menu {
-  text-align: left;
-  background: $light-background-color;
-  border-top: none;
-  padding: 3em 1.5em;
-  user-select: none;
-  display: none;
-  box-shadow: none;
+/* mobile phone and smart portable devices */
+@media screen and (max-width: 479px) {
+  .main {
+    padding-top: 40pt;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block !important;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.6s ease 0s;
+  }
+  .navbar-mobile .container {
+    padding: 0;
+    margin: 0;
+    line-height: 5.5em;
+    background: $light-background-color;
+  }
+  .navbar-mobile .container .navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle {
+    display: flex;
+    cursor: pointer;
+    line-height: 5.5em;
+    user-select: none;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle .menu-icon {
+    display: block;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle .close-icon {
+    display: none;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active .menu-icon {
+    display: none;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active .close-icon {
+    display: block;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(1) {
+    margin-bottom: 8px;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(3) {
+    margin-top: 8px;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active span {
+    -webkit-transition: 0.25s margin, 0.25s transform 0.25s;
+    -moz-transition: 0.25s margin, 0.25s transform 0.25s;
+    transition: 0.25s margin, 0.25s transform 0.25s;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(1) {
+    -moz-transform: rotate(45deg) translate(4px, 6px);
+    -ms-transform: rotate(45deg) translate(4px, 6px);
+    -webkit-transform: rotate(45deg) translate(4px, 6px);
+    transform: rotate(45deg) translate(4px, 6px);
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(3) {
+    -moz-transform: rotate(-45deg) translate(8px, -10px);
+    -ms-transform: rotate(-45deg) translate(8px, -10px);
+    -webkit-transform: rotate(-45deg) translate(8px, -10px);
+    transform: rotate(-45deg) translate(8px, -10px);
+  }
+  .menu {
+    text-align: left;
+    background: $light-background-color;
+    border-top: none;
+    padding: 3em 1.5em;
+    user-select: none;
+    display: none;
+    box-shadow: none;
 /* 核心修改：实现全屏覆盖 */
-  position: fixed;
-  top: 5.5em /* 紧接在顶部 Header 下方 */;
-  left: 0;
-  width: 100vw /* 宽度占满手机屏幕 */;
-  height: calc(100vh - 5.5em) /* 高度铺满屏幕剩余区域 */;
-  z-index: 99 /* 层级盖住网页正文 */;
-  box-sizing: border-box;
-  overflow-y: auto /* 内容超出时允许滚动 */;
-}
-.menu-toggle .menu a {
-  display: block !important;
-  width: 100%;
-  margin: 0;
-  line-height: 2.2em /* 增大行距 */;
-  font-size: 2.2rem /* 放大字号，对齐截图效果 */;
-  font-weight: 500;
-  color: inherit;
-}
-.menu-toggle .menu.active {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.dark-theme .menu-toggle .menu {
-  background: $dark-background-color;
-  border-top: none;
-}
-.menu-toggle .intro {
-  display: flex;
-  flex-direction: column /* 手机排版：上下垂直排列 */;
-  gap: 24px /* 手机端间距缩小 */;
-  align-items: center;
-  justify-content: center;
-  text-align: center /* 手机端文字居中显示，体验更好 */;
-}
-.menu-toggle .avatar {
-  transform: translateY(0);
-}
-.menu-toggle .avatar img {
-  width: 160px /* 手机端适当缩小图片尺寸 */;
-  height: auto;
-}
-.menu-toggle .intro-text {
-  max-width: 90%;
-  padding-top: 0;
-}
-.menu-toggle .archive {
-  width: 90%;
-}
-.menu-toggle .archive .archive-item .archive-item-date {
-  display: none;
-}
-.menu-toggle #dynamic-to-top {
-  display: none !important;
-}
-.menu-toggle .footer {
-  height: 3rem;
-  width: 100%;
-  text-align: center;
-  line-height: 1.5rem;
-  padding-top: 2em;
-}
-.menu-toggle .post-warp {
-  padding-top: 6em;
-}
-.menu-toggle .post-warp .archive-item-date {
-  display: none;
-}
-.menu-toggle .categories .categories-card .card-item {
-  width: 100%;
-  display: flex;
-  min-height: 0;
-}
-.menu-toggle .categories .categories-card .card-item .categories {
-  overflow: hidden;
+    position: fixed;
+    top: 5.5em /* 紧接在顶部 Header 下方 */;
+    left: 0;
+    width: 100vw /* 宽度占满手机屏幕 */;
+    height: calc(100vh - 5.5em) /* 高度铺满屏幕剩余区域 */;
+    z-index: 99 /* 层级盖住网页正文 */;
+    box-sizing: border-box;
+    overflow-y: auto /* 内容超出时允许滚动 */;
+  }
+  .menu a {
+    display: block !important;
+    width: 100%;
+    margin: 0;
+    line-height: 2.2em /* 增大行距 */;
+    font-size: 2.2rem /* 放大字号，对齐截图效果 */;
+    font-weight: 500;
+    color: inherit;
+  }
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .dark-theme .menu {
+    background: $dark-background-color;
+    border-top: none;
+  }
+  .intro {
+    display: flex;
+    flex-direction: column /* 手机排版：上下垂直排列 */;
+    gap: 24px /* 手机端间距缩小 */;
+    align-items: center;
+    justify-content: center;
+    text-align: center /* 手机端文字居中显示，体验更好 */;
+  }
+  .avatar {
+    transform: translateY(0);
+  }
+  .avatar img {
+    width: 160px /* 手机端适当缩小图片尺寸 */;
+    height: auto;
+  }
+  .intro-text {
+    max-width: 90%;
+    padding-top: 0;
+  }
+  .archive {
+    width: 90%;
+  }
+  .archive .archive-item .archive-item-date {
+    display: none;
+  }
+  #dynamic-to-top {
+    display: none !important;
+  }
+  .footer {
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5rem;
+    padding-top: 2em;
+  }
+  .post-warp {
+    padding-top: 6em;
+  }
+  .post-warp .archive-item-date {
+    display: none;
+  }
+  .categories .categories-card .card-item {
+    width: 100%;
+    display: flex;
+    min-height: 0;
+  }
+  .categories .categories-card .card-item .categories {
+    overflow: hidden;
+  }
 }
 /* iPads (portrait and landscape) ----------- */
 @media screen and (max-width: 1023px) {
