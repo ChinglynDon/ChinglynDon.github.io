@@ -1321,14 +1321,26 @@ header .menu label {
   flex-direction: column !important /* 移动端强制上下分行 */;
   align-items: flex-start !important;
 }
-.post-title,
-a {
+.post-item .post-title,
+.archive-item .post-title,
+.post-list-item .post-title,
+.post-item a,
+.archive-item a,
+.post-list-item a {
   font-size: 1.1rem !important;
   line-height: 1.4em !important;
 }
-.post-date font-size 0.85rem !important color #888888 !important,
-.date font-size 0.85rem !important color #888888 !important,
-time font-size 0.85rem !important color #888888 !important {
+.post-item .post-date,
+.archive-item .post-date,
+.post-list-item .post-date,
+.post-item .date,
+.archive-item .date,
+.post-list-item .date,
+.post-item time,
+.archive-item time,
+.post-list-item time {
+  font-size: 0.85rem !important /* 适当字号调小，显得精致 */;
+  color: #888 !important /* 柔和灰色 */;
   margin-left: 0 !important /* 清空左边距 */;
 }
 @media screen and (max-width: 1023px) {
