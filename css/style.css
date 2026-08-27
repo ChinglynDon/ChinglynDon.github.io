@@ -1184,39 +1184,23 @@ header .menu label {
   }
   .navbar-mobile .container .navbar-header .menu-toggle {
     display: flex;
-    flex-direction: column /* 上下排列两根横线 */;
-    justify-content: center /* 垂直居中 */;
-    align-items: center;
     cursor: pointer;
+    line-height: 5.5em;
     user-select: none;
-    width: 40px;
-    height: 5.5em;
-/* 清除原来的 SVG 图标 */
-/* 纯 CSS 绘制极简细线 */
-/* 激活时变 X */
   }
-  .navbar-mobile .container .navbar-header .menu-toggle .menu-icon,
-  .navbar-mobile .container .navbar-header .menu-toggle .close-icon {
-    display: none !important;
-  }
-  .navbar-mobile .container .navbar-header .menu-toggle::before,
-  .navbar-mobile .container .navbar-header .menu-toggle::after {
-    content: "";
+  .navbar-mobile .container .navbar-header .menu-toggle .menu-icon {
     display: block;
-    width: 36px /* 横线长度 */;
-    height: 1.5px /* 设为 1.5px 完美解决高分屏看不见的问题，视觉上依然极细 */;
-    background-color: currentColor;
-    transition: transform 0.3s ease, margin 0.3s ease;
+    width: 36px /* 拉长宽度 */;
+    height: auto;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle::before {
-    margin-bottom: 6px /* 两线间距 */;
+  .navbar-mobile .container .navbar-header .menu-toggle .close-icon {
+    display: none;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active::before {
-    transform: translateY(3.75px) rotate(45deg);
-    margin-bottom: 0;
+  .navbar-mobile .container .navbar-header .menu-toggle.active .menu-icon {
+    display: none;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active::after {
-    transform: translateY(-3.75px) rotate(-45deg);
+  .navbar-mobile .container .navbar-header .menu-toggle.active .close-icon {
+    display: block;
   }
   .navbar-mobile .container .navbar-header.active .menu-icon {
     display: none;
