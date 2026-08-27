@@ -1234,7 +1234,8 @@ header .menu label {
     user-select: none;
     display: none;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.1), 0px 4px 8px rgba(0,0,0,0.1);
-a
+  }
+  .navbar-mobile .container .menu a {
     display: block;
     margin: 0;
     line-height: 2.5em;
@@ -1252,63 +1253,63 @@ a
   .dark-theme .navbar-mobile .container {
     background: #292a2d !important;
   }
-  .intro {
+  .navbar-mobile .intro {
     flex-direction: column;
     gap: 30px;
     align-items: center;
   }
-  .avatar {
+  .navbar-mobile .avatar {
     transform: translateY(0);
   }
-  .avatar img {
+  .navbar-mobile .avatar img {
     width: 200px;
   }
-  .intro-text {
+  .navbar-mobile .intro-text {
     max-width: 90%;
     padding-top: 0;
   }
-  .archive {
+  .navbar-mobile .archive {
     width: 90%;
   }
-  .archive .archive-item .archive-item-date {
+  .navbar-mobile .archive .archive-item .archive-item-date {
     display: none;
   }
-  #dynamic-to-top {
+  .navbar-mobile #dynamic-to-top {
     display: none !important;
   }
-  .footer {
+  .navbar-mobile .footer {
     height: 3rem;
     width: 100%;
     text-align: center;
     line-height: 1.5rem;
     padding-top: 2em;
   }
-  .post-warp {
+  .navbar-mobile .post-warp {
     padding-top: 6em;
   }
-  .post-warp .archive-item-date {
+  .navbar-mobile .post-warp .archive-item-date {
     display: none;
   }
-  .categories .categories-card .card-item {
+  .navbar-mobile .categories .categories-card .card-item {
     width: 100%;
     display: flex;
     min-height: 0;
   }
-  .categories .categories-card .card-item .categories {
+  .navbar-mobile .categories .categories-card .card-item .categories {
     overflow: hidden;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 479px) and (max-width: 1023px) {
   .navbar-mobile {
     display: none;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 479px) and (min-width: 1024px) {
   .navbar-mobile {
     display: none;
   }
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 479px) and (max-width: 1279px) {
   .post-toc {
     display: none;
   }
