@@ -1,26 +1,19 @@
-/* 2. 手机端样式：自动切换为垂直排列 */
-/* mobile phone and smart portable devices */
 @media screen and (max-width: 479px) {
-  .main {
-    padding-top: 40pt;
-  }
-  .main .navbar {
+  .navbar {
     display: none;
   }
-  .main .navbar-mobile {
+  .navbar-mobile {
     display: block !important;
     position: fixed;
     width: 100%;
-    z-index: 100;
-    transition: all 0.6s ease 0s;
   }
-  .main .navbar-mobile .container {
+  .navbar-mobile z-index 100 .container {
     padding: 0;
     margin: 0;
     line-height: 5.5em;
     background: $light-background-color;
   }
-  .main .navbar-mobile .container .navbar-header {
+  .navbar-mobile z-index 100 .container .navbar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +23,7 @@
     box-sizing: border-box;
     position: relative;
   }
-  .main .navbar-mobile .container .navbar-header .menu-toggle {
+  .navbar-mobile z-index 100 .container .navbar-header .menu-toggle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,12 +34,12 @@
     height: 5.5em;
     position: relative;
   }
-  .main .navbar-mobile .container .navbar-header .menu-toggle .menu-icon,
-  .main .navbar-mobile .container .navbar-header .menu-toggle .close-icon {
+  .navbar-mobile z-index 100 .container .navbar-header .menu-toggle .menu-icon,
+  .navbar-mobile z-index 100 .container .navbar-header .menu-toggle .close-icon {
     display: none !important;
   }
-  .main .navbar-mobile .container .navbar-header .menu-toggle::before,
-  .main .navbar-mobile .container .navbar-header .menu-toggle::after {
+  .navbar-mobile z-index 100 .container .navbar-header .menu-toggle::before,
+  .navbar-mobile z-index 100 .container .navbar-header .menu-toggle::after {
     content: "";
     display: block;
     width: 36px;
@@ -55,17 +48,17 @@
     flex-shrink: 0;
     transition: all 0.25s ease;
   }
-  .main .navbar-mobile .container .navbar-header .menu-toggle::before {
+  .navbar-mobile z-index 100 .container .navbar-header .menu-toggle::before {
     margin-bottom: 7px;
   }
-  .main .navbar-mobile .container .navbar-header .menu-toggle.active::before {
+  .navbar-mobile z-index 100 .container .navbar-header .menu-toggle.active::before {
     transform: translateY(4px) rotate(45deg);
     margin-bottom: 0;
   }
-  .main .navbar-mobile .container .navbar-header .menu-toggle.active::after {
+  .navbar-mobile z-index 100 .container .navbar-header .menu-toggle.active::after {
     transform: translateY(-4px) rotate(-45deg);
   }
-  .main .navbar-mobile .container .menu {
+  .navbar-mobile z-index 100 .container .menu {
     text-align: center;
     background: $light-background-color;
     border-top: 1px solid #000;
@@ -75,18 +68,18 @@
     display: none;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.1), 0px 4px 8px rgba(0,0,0,0.1);
   }
-  .main .navbar-mobile .container .menu a {
+  .navbar-mobile z-index 100 .container .menu a {
     display: block;
     width: 100%;
     margin: 0;
     line-height: 2.5em;
   }
-  .main .navbar-mobile .container .menu.active {
+  .navbar-mobile z-index 100 .container .menu.active {
     display: block;
     white-space: normal;
     overflow: hidden;
   }
-  .main .navbar-mobile .menu {
+  .navbar-mobile z-index 100 .menu {
     text-align: left;
     background: $light-background-color;
     border-top: none;
@@ -104,7 +97,7 @@
     box-sizing: border-box;
     overflow-y: auto /* 内容超出时允许滚动 */;
   }
-  .main .navbar-mobile .menu a {
+  .navbar-mobile z-index 100 .menu a {
     display: block !important;
     width: 100%;
     margin: 0;
@@ -113,12 +106,12 @@
     font-weight: 500;
     color: inherit;
   }
-  .main .navbar-mobile .menu.active {
+  .navbar-mobile z-index 100 .menu.active {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .dark-theme .main .navbar-mobile .menu {
+  .dark-theme .navbar-mobile z-index 100 .menu {
     background: $dark-background-color;
     border-top: none;
   }
