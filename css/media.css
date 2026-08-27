@@ -1,0 +1,146 @@
+/* 2. 手机端样式：自动切换为垂直排列 */
+/* mobile phone and smart portable devices */
+@media screen and (max-width: 479px) {
+  .main {
+    padding-top: 40pt;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    width: 40px;
+    height: 5.5em;
+  }
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle .menu-icon,
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle .close-icon {
+    display: none !important;
+  }
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle::before,
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.3s ease;
+  }
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle::before {
+    margin-bottom: 6px;
+  }
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle.active::before {
+    transform: translateY(4px) rotate(45deg);
+    margin-bottom: 0;
+  }
+  .navbar .navbar-mobile .container .navbar-header .menu-toggle.active::after {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+  .navbar .navbar-mobile .menu {
+    text-align: left;
+    background: $light-background-color;
+    border-top: none;
+    padding: 3em 1.5em;
+    user-select: none;
+    display: none;
+    box-shadow: none;
+/* 核心修改：实现全屏覆盖 */
+    position: fixed;
+    top: 5.5em /* 紧接在顶部 Header 下方 */;
+    left: 0;
+    width: 100vw /* 宽度占满手机屏幕 */;
+    height: calc(100vh - 5.5em) /* 高度铺满屏幕剩余区域 */;
+    z-index: 99 /* 层级盖住网页正文 */;
+    box-sizing: border-box;
+    overflow-y: auto /* 内容超出时允许滚动 */;
+  }
+  .navbar .navbar-mobile .menu a {
+    display: block !important;
+    width: 100%;
+    margin: 0;
+    line-height: 2.2em /* 增大行距 */;
+    font-size: 2.2rem /* 放大字号，对齐截图效果 */;
+    font-weight: 500;
+    color: inherit;
+  }
+  .navbar .navbar-mobile .menu.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .dark-theme .navbar .navbar-mobile .menu {
+    background: $dark-background-color;
+    border-top: none;
+  }
+  .intro {
+    display: flex;
+    flex-direction: column /* 手机排版：上下垂直排列 */;
+    gap: 24px /* 手机端间距缩小 */;
+    align-items: center;
+    justify-content: center;
+    text-align: center /* 手机端文字居中显示，体验更好 */;
+  }
+  .avatar {
+    transform: translateY(0);
+  }
+  .avatar img {
+    width: 160px /* 手机端适当缩小图片尺寸 */;
+    height: auto;
+  }
+  .intro-text {
+    max-width: 90%;
+    padding-top: 0;
+  }
+  .archive {
+    width: 90%;
+  }
+  .archive .archive-item .archive-item-date {
+    display: none;
+  }
+  #dynamic-to-top {
+    display: none !important;
+  }
+  .footer {
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5rem;
+    padding-top: 2em;
+  }
+  .post-warp {
+    padding-top: 6em;
+  }
+  .post-warp .archive-item-date {
+    display: none;
+  }
+  .categories .categories-card .card-item {
+    width: 100%;
+    display: flex;
+    min-height: 0;
+  }
+  .categories .categories-card .card-item .categories {
+    overflow: hidden;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media screen and (max-width: 1023px) {
+  .navbar-mobile {
+    display: none;
+  }
+}
+/* Desktops and laptops ----------- */
+@media screen and (min-width: 1024px) {
+  .navbar-mobile {
+    display: none;
+  }
+}
+/* post toc Style */
+@media screen and (max-width: 1279px) {
+  .post-toc {
+    display: none;
+  }
+}
