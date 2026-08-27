@@ -1,3 +1,4 @@
+/* mobile phone and smart portable devices */
 @media screen and (max-width: 479px) {
   .main {
     padding-top: 40pt;
@@ -10,16 +11,25 @@
     position: fixed;
     width: 100%;
     z-index: 100;
+    transition: all 0.6s ease 0s;
+/* 暗夜模式处理 */
   }
   .navbar-mobile .container {
     padding: 0;
     margin: 0;
     line-height: 5.5em;
+    background: $light-background-color;
+/* 全屏覆盖菜单页面 */
   }
   .navbar-mobile .container .navbar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
+    box-sizing: border-box;
+    position: relative;
   }
   .navbar-mobile .container .navbar-header .menu-toggle {
     display: flex;
@@ -31,34 +41,96 @@
     width: 40px;
     height: 5.5em;
     position: relative;
+/* 隐藏原生 SVG 元素 */
+/* 纯 CSS 绘制 1.5px 极细加长两横杠 */
+/* 针对 HTML 里有 span 的兼容处理 */
+/* 点击展开后旋转切为 X */
   }
   .navbar-mobile .container .navbar-header .menu-toggle .menu-icon,
-  .navbar-mobile .container .navbar-header .menu-toggle .close-icon {
+  .navbar-mobile .container .navbar-header .menu-toggle .close-icon,
+  .navbar-mobile .container .navbar-header .menu-toggle svg {
     display: none !important;
   }
   .navbar-mobile .container .navbar-header .menu-toggle::before,
-  .navbar-mobile .container .navbar-header .menu-toggle::after {
+  .navbar-mobile .container .navbar-header .menu-toggle::after,
+  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(1),
+  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(3) {
     content: "";
     display: block;
-    width: 36px;
-    height: 5px;
-    background-color: #333;
+    width: 36px /* 线的长度 */;
+    height: 1.5px /* 线的粗细：1.5px 极细 */;
+    background-color: #333 !important /* 默认深色 */;
+    flex-shrink: 0 /* 关键：防止线高被压缩为 0 */;
     transition: all 0.25s ease;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle::before {
-    margin-bottom: 7px;
+  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(2) {
+    display: none !important;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active::before {
-    transform: translateY(4px) rotate(45deg);
-    margin-bottom: 0;
+  .navbar-mobile .container .navbar-header .menu-toggle::before,
+  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(1) {
+    margin-bottom: 8px /* 两线间距 */;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active::after {
-    transform: translateY(-4px) rotate(-45deg);
+  .navbar-mobile .container .navbar-header .menu-toggle.active::before,
+  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(1) {
+    transform: translateY(4.75px) rotate(45deg);
+    margin-bottom: 0 !important;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active::after,
+  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-4.75px) rotate(-45deg);
+  }
+  .navbar-mobile .container .menu {
+    text-align: left;
+    background: $light-background-color;
+    border-top: none;
+    padding: 3em 1.5em;
+    user-select: none;
+    display: none;
+    box-shadow: none;
+/* 全屏定位属性 */
+    position: fixed;
+    top: 5.5em;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 5.5em);
+    height: calc(100dvh - 5.5em) /* 完美适配安卓与 iOS 动态视口 */;
+    z-index: 99;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navbar-mobile .container .menu a {
+    display: block !important;
+    width: 100%;
+    margin: 0;
+    line-height: 2.2em;
+    font-size: 2.2rem /* 大字号艺术排版 */;
+    font-weight: 500;
+    color: inherit;
+  }
+  .navbar-mobile .container .menu.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .dark-theme .navbar-mobile .container .menu {
+    background: $dark-background-color;
+    border-top: none;
+  }
+  .dark-theme .navbar-mobile {
+    background: $dark-background-color !important;
+  }
+  .dark-theme .navbar-mobile .menu-toggle::before,
+  .dark-theme .navbar-mobile .menu-toggle::after,
+  .dark-theme .navbar-mobile .menu-toggle span {
+    background-color: #fff !important /* 自动切为白线 */;
   }
   .intro {
+    display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
+    text-align: center;
   }
   .avatar {
     transform: translateY(0);
