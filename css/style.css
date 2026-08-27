@@ -1378,6 +1378,12 @@ header .menu label {
     margin-left: 0 !important /* 清空左边距 */;
     margin-right: 8px !important /* 右侧安全保护边距 */;
   }
+  .post-content,
+  section.post-content,
+  .post-wrap p {
+    text-align: left !important;
+    word-break: break-word !important;
+  }
 }
 @media screen and (max-width: 1023px) {
   .navbar-mobile {
