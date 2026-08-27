@@ -1,7 +1,16 @@
 /* mobile phone and smart portable devices */
 @media screen and (max-width: 479px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
   .main {
     padding-top: 80px !important /* 适当增大顶部内边距，防止固定导航栏遮挡正文 */;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
   .navbar {
     display: none !important /* 强制隐藏桌面端导航 */;
@@ -144,18 +153,21 @@
     max-width: 90%;
     padding-top: 0;
   }
+  h3,
   .archive-year,
   .year,
   h2.archive-year {
     margin-top: 2.5em !important /* 与上方内容拉开距离 */;
     margin-bottom: 1.2em !important /* 与下方第一篇文章拉开距离 */;
-    margin-left: 40px !important;
+    margin-left: 25px !important /* 调整为合理的 25px 边距 */;
     font-size: 1.6rem !important;
     font-weight: 700;
+    word-break: break-word !important;
   }
   .post-list,
   .archive-list {
-    padding-right: 12px !important /* 确保右侧留有安全内边距 */;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
     box-sizing: border-box !important;
   }
   .post-item,
@@ -167,8 +179,8 @@
     margin-bottom: 1.8em !important /* 增加每篇文章之间的间距 */;
     width: 100% !important;
     box-sizing: border-box !important;
-/* 文章标题 */
-/* 右侧/下方日期（解决贴靠右侧被遮挡问题） */
+/* 文章标题选择器组 */
+/* 右侧/下方日期 */
   }
   .post-item .post-title,
   .archive-item .post-title,
@@ -182,7 +194,7 @@
     font-size: 1.1rem !important;
     line-height: 1.4em !important;
     margin-bottom: 6px !important;
-    word-break: break-word /* 长标题自动折行 */;
+    word-break: break-word !important /* 长标题自动折行 */;
   }
   .post-item .post-date,
   .archive-item .post-date,
@@ -196,7 +208,7 @@
     font-size: 0.85rem !important /* 缩小字号 */;
     color: #888 !important /* 柔和灰色 */;
     margin-left: 0 !important /* 清空左边距 */;
-    margin-right: 8px !important /* 右侧安全保护边距，绝不贴边 */;
+    margin-right: 8px !important /* 右侧安全保护边距 */;
   }
 }
 /* iPads (portrait and landscape) ----------- */
