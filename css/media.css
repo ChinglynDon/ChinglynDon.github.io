@@ -28,7 +28,7 @@
     content: "";
     display: block;
     width: 36px /* 线的长度：可自由修改，如 38px */;
-    height: 1.5px /* 线的粗细：1.5px 极细 */;
+    height: 5px /* 线的粗细：1.5px 极细 */;
     background-color: #333 !important /* 强制指定颜色，防止渲染透明 */;
     flex-shrink: 0 /* 关键：防止 Flexbox 将线压缩看不见 */;
     transition: all 0.25s ease;
