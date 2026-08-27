@@ -4,11 +4,13 @@
     padding-top: 40pt;
   }
   .navbar {
-    display: none;
+    display: none !important /* 强制隐藏桌面端导航 */;
   }
   .navbar-mobile {
     display: block !important;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 100;
     transition: all 0.6s ease 0s;
@@ -19,15 +21,15 @@
     margin: 0;
     line-height: 5.5em;
     background: $light-background-color;
-/* 全屏覆盖菜单页面 */
+/* 核心修复：移动端下拉菜单默认必须彻底隐藏 */
   }
   .navbar-mobile .container .navbar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
     box-sizing: border-box;
     position: relative;
   }
@@ -43,7 +45,6 @@
     position: relative;
 /* 隐藏原生 SVG 元素 */
 /* 纯 CSS 绘制 1.5px 极细加长两横杠 */
-/* 针对 HTML 里有 span 的兼容处理 */
 /* 点击展开后旋转切为 X */
   }
   .navbar-mobile .container .navbar-header .menu-toggle .menu-icon,
@@ -52,48 +53,45 @@
     display: none !important;
   }
   .navbar-mobile .container .navbar-header .menu-toggle::before,
-  .navbar-mobile .container .navbar-header .menu-toggle::after,
-  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(1),
-  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(3) {
+  .navbar-mobile .container .navbar-header .menu-toggle::after {
     content: "";
     display: block;
     width: 36px /* 线的长度 */;
-    height: 1.5px /* 线的粗细：1.5px 极细 */;
+    height: 1.5px /* 线的粗细 */;
     background-color: #333 !important /* 默认深色 */;
-    flex-shrink: 0 /* 关键：防止线高被压缩为 0 */;
+    flex-shrink: 0;
     transition: all 0.25s ease;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(2) {
-    display: none !important;
-  }
-  .navbar-mobile .container .navbar-header .menu-toggle::before,
-  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(1) {
+  .navbar-mobile .container .navbar-header .menu-toggle::before {
     margin-bottom: 8px /* 两线间距 */;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active::before,
-  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(1) {
+  .navbar-mobile .container .navbar-header .menu-toggle.active::before {
     transform: translateY(4.75px) rotate(45deg);
     margin-bottom: 0 !important;
   }
-  .navbar-mobile .container .navbar-header .menu-toggle.active::after,
-  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(3) {
+  .navbar-mobile .container .navbar-header .menu-toggle.active::after {
     transform: translateY(-4.75px) rotate(-45deg);
   }
   .navbar-mobile .container .menu {
+    display: none !important /* 默认绝对隐藏，不占页面位置 */;
     text-align: left;
     background: $light-background-color;
     border-top: none;
-    padding: 3em 1.5em;
+    padding: 2em 1.5em;
     user-select: none;
-    display: none;
     box-shadow: none;
-/* 全屏定位属性 */
+/* 点击两横杠展开后的全屏覆盖样式 */
+  }
+  .navbar-mobile .container .menu.active {
+    display: flex !important /* 只有点开时才显示 */;
+    flex-direction: column;
+    justify-content: flex-start;
     position: fixed;
     top: 5.5em;
     left: 0;
     width: 100%;
     height: calc(100vh - 5.5em);
-    height: calc(100dvh - 5.5em) /* 完美适配安卓与 iOS 动态视口 */;
+    height: calc(100dvh - 5.5em);
     z-index: 99;
     box-sizing: border-box;
     overflow-y: auto;
@@ -108,22 +106,15 @@
     font-weight: 500;
     color: inherit;
   }
-  .navbar-mobile .container .menu.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .dark-theme .navbar-mobile .container .menu {
-    background: $dark-background-color;
-    border-top: none;
-  }
   .dark-theme .navbar-mobile {
     background: $dark-background-color !important;
   }
   .dark-theme .navbar-mobile .menu-toggle::before,
-  .dark-theme .navbar-mobile .menu-toggle::after,
-  .dark-theme .navbar-mobile .menu-toggle span {
+  .dark-theme .navbar-mobile .menu-toggle::after {
     background-color: #fff !important /* 自动切为白线 */;
+  }
+  .dark-theme .navbar-mobile .menu {
+    background: $dark-background-color !important;
   }
   .intro {
     display: flex;
