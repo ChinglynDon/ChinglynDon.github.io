@@ -1311,7 +1311,25 @@ header .menu label {
   .intro-text {
     max-width: 90%;
     padding-top: 0;
+/* 修复文章列表中标题与日期的挤压问题 */
   }
+}
+.post-item,
+.archive-item,
+.post-list-item {
+  display: flex !important;
+  flex-direction: column !important /* 移动端强制上下分行 */;
+  align-items: flex-start !important;
+}
+.post-title,
+a {
+  font-size: 1.1rem !important;
+  line-height: 1.4em !important;
+}
+.post-date font-size 0.85rem !important color #888888 !important,
+.date font-size 0.85rem !important color #888888 !important,
+time font-size 0.85rem !important color #888888 !important {
+  margin-left: 0 !important /* 清空左边距 */;
 }
 @media screen and (max-width: 1023px) {
   .navbar-mobile {
