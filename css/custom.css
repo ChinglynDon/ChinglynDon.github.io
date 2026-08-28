@@ -17,3 +17,17 @@ h6::before {
   display: none !important;
   content: "" !important;
 }
+/* 强制开启 EB Garamond 的双层 g (Stylistic Set 2) */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  -webkit-font-feature-settings: "ss02" 1 !important;
+  font-feature-settings: "ss02" 1 !important;
+}

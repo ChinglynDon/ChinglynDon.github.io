@@ -144,66 +144,66 @@ template {
 }
 @font-face {
   font-family: 'lanting';
-  src: url("../fonts/lanting/lanting.eot"); /* IE9 */
-  src: url("../fonts/lanting/lanting.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */ url("../fonts/lanting/lanting.woff2") format('woff2'), url("../fonts/lanting/lanting.woff") format('woff'), url("../fonts/lanting/lanting.ttf") format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  src: url("/fonts/lanting/lanting.eot"); /* IE9 */
+  src: url("/fonts/lanting/lanting.eot?#iefix") format('embedded-opentype'), url("/fonts/lanting/lanting.woff2") format('woff2'), url("/fonts/lanting/lanting.woff") format('woff'), url("/fonts/lanting/lanting.ttf") format('truetype');
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: 'new-caledonia';
-  src: url("../fonts/new-caledonia/NewCaledoniaRg.woff2") format('woff2');
+  src: url("/fonts/new-caledonia/NewCaledoniaRg.woff2") format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'new-caledonia';
-  src: url("../fonts/new-caledonia/NewCaledoniaRgIt.woff2") format('woff2');
+  src: url("/fonts/new-caledonia/NewCaledoniaRgIt.woff2") format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'new-caledonia';
-  src: url("../fonts/new-caledonia/NewCaledoniaBold.woff2") format('woff2');
+  src: url("/fonts/new-caledonia/NewCaledoniaBold.woff2") format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'new-caledonia';
-  src: url("../fonts/new-caledonia/NewCaledoniaBoldIt.woff2") format('woff2');
+  src: url("/fonts/new-caledonia/NewCaledoniaBoldIt.woff2") format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-  @font-face {
-    font-family: 'eb-garamond';
-    src: url("../fonts/EG-Garamond/EBGaramond-Regular.woff2") format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'eb-garamond';
-    src: url("../fonts/EG-Garamond/EBGaramond-Italic.woff2") format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'eb-garamond';
-    src: url("../fonts/EG-Garamond/EBGaramond-Bold.woff2") format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'eb-garamond';
-    src: url("../fonts/EG-Garamond/EBGaramond-BoldItalic.woff2") format('woff2');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-  }
+}
+@font-face {
+  font-family: 'eb-garamond';
+  src: url("/fonts/EB-Garamond/EBGaramond-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'eb-garamond';
+  src: url("/fonts/EB-Garamond/EBGaramond-Italic.woff2") format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'eb-garamond';
+  src: url("/fonts/EB-Garamond/EBGaramond-Bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'eb-garamond';
+  src: url("/fonts/EB-Garamond/EBGaramond-BoldItalic.woff2") format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
 html {
   font-family: 'eb-garamond', 'Songti SC', SimSun, serif;
@@ -1521,4 +1521,17 @@ h5::before,
 h6::before {
   display: none !important;
   content: "" !important;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  -webkit-font-feature-settings: "ss02" 1 !important;
+  font-feature-settings: "ss02" 1 !important;
 }
