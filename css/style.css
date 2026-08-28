@@ -1524,16 +1524,21 @@ h6::before {
   display: none !important;
   content: "" !important;
 }
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-span {
-  -webkit-font-feature-settings: "ss02" 1 !important;
-  font-feature-settings: "ss02" 1 !important;
+footer,
+#footer,
+.footer {
+  margin-top: 40px !important;
+}
+.post,
+#post,
+.article,
+.post-navigation,
+.pagination {
+  margin-bottom: 45vh !important;
+}
+.main {
+  margin-bottom: 45vh !important;
+}
+.profile-container {
+  margin-bottom: 0 !important;
 }

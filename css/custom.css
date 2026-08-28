@@ -17,17 +17,25 @@ h6::before {
   display: none !important;
   content: "" !important;
 }
-/* 强制开启 EB Garamond 的双层 g (Stylistic Set 2) */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-span {
-  -webkit-font-feature-settings: "ss02" 1 !important;
-  font-feature-settings: "ss02" 1 !important;
+/* 1. 默认 Footer（针对 Home / CV 等精简页面）：保持紧凑自然的间距 */
+footer,
+#footer,
+.footer {
+  margin-top: 40px !important;
+}
+/* 2. 针对 Blog 文章页（通过寻找 back · home 所在的导航栏或文章区域推开 Contact） */
+.post,
+#post,
+.article,
+.post-navigation,
+.pagination {
+  margin-bottom: 45vh !important;
+}
+/* 3. 针对 Research 页面（不管 class 叫什么，直接给 main 加上自适应底边距） */
+.main {
+  margin-bottom: 45vh !important;
+}
+/* 4. 关键修正：为了防止 Home 页面被上面的 .main 影响，把 Home 顶部的 main 还原 */
+.profile-container {
+  margin-bottom: 0 !important;
 }
