@@ -632,7 +632,7 @@ header .menu label {
 .intro .avatar {
   padding: 10px;
   flex-shrink: 0;
-  transform: translateY(-20px);
+  transform: translateY(-5px);
 }
 .intro .avatar img {
   width: 260px;
