@@ -511,8 +511,11 @@ header .menu label {
   margin-left: 15px;
   position: relative;
 }
-.contact {
+.footer {
   text-align: center;
+  padding: 30px 10px 10px;
+  background: #f7f7f7;
+  height: auto;
 }
 .contact-title {
   font-weight: 700;
@@ -533,7 +536,11 @@ header .menu label {
 }
 .copyright {
   font-size: 18px;
-  padding-bottom: 30px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.home-footer {
+  background: transparent;
 }
 .pagination {
   display: flex;
@@ -1523,22 +1530,4 @@ h5::before,
 h6::before {
   display: none !important;
   content: "" !important;
-}
-footer,
-#footer,
-.footer {
-  margin-top: 40px !important;
-}
-.post,
-#post,
-.article,
-.post-navigation,
-.pagination {
-  margin-bottom: 45vh !important;
-}
-.main {
-  margin-bottom: 45vh !important;
-}
-.profile-container {
-  margin-bottom: 0 !important;
 }
