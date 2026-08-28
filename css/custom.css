@@ -17,3 +17,15 @@ h6::before {
   display: none !important;
   content: "" !important;
 }
+/* 给非 Home 页面的主内容区域设置最小高度，使其强制撑开屏幕 */
+body:not(.home) .main,
+body:not(.home) .content,
+body:not(.home) #main {
+  min-height: 85vh !important /* 占据屏幕 85% 的高度，确保把 Footer 挤出首屏 */;
+}
+/* 给文章底部的导航栏（上一篇/下一篇/back home）增加底部留白 */
+.post-nav,
+.pagination,
+.article-nav {
+  margin-bottom: 140px !important /* 向下推开 80px 的距离 */;
+}

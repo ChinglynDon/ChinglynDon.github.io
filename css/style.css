@@ -1531,3 +1531,13 @@ h6::before {
   display: none !important;
   content: "" !important;
 }
+body:not(.home) .main,
+body:not(.home) .content,
+body:not(.home) #main {
+  min-height: 85vh !important /* 占据屏幕 85% 的高度，确保把 Footer 挤出首屏 */;
+}
+.post-nav,
+.pagination,
+.article-nav {
+  margin-bottom: 140px !important /* 向下推开 80px 的距离 */;
+}
