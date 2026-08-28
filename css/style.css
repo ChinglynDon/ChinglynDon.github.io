@@ -477,13 +477,15 @@ header {
   user-select: none;
 }
 header .header-logo {
-  margin-left: -10px /* 往右移动 10px（数值越大越靠右） */;
+  margin-left: -40px /* 往右移动 10px（数值越大越靠右） */;
 /* margin-left -10px */
 /* 如果想往左靠，可以用负数 */
 }
 header .menu {
   display: flex;
   align-items: center;
+  position: relative;
+  right: -80px;
 }
 header .menu a {
   display: inline-block;
@@ -499,7 +501,7 @@ header .menu a {
 header .menu a.active::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -6px;
   left: 0;
   width: 100%;
   height: 1.5px;
