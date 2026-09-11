@@ -6,6 +6,27 @@
   font-display: swap;
 }
 @font-face {
+  font-family: 'Didot';
+  src: url("/fonts/Didot/GFSDidot-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura';
+  src: url("/fonts/Futura/FuturaCyrillicBook.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bebas_Neue';
+  src: url("/fonts/Bebas_Neue/BebasNeue-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: 'new-caledonia';
   src: url("/fonts/new-caledonia/NewCaledoniaRg.woff2") format('woff2');
   font-weight: 400;
