@@ -1,7 +1,8 @@
 header .header-logo a {
-  font-family: "Futura", serif !important;
+  font-family: "Bebas_thin", serif !important;
   font-size: 26px;
   font-weight: 400;
+  letter-spacing: 0.08em;
 }
 header .menu a {
   font-size: 22px;
@@ -28,4 +29,23 @@ body:not(.home) #main {
 .pagination,
 .article-nav {
   margin-bottom: 140px !important /* 向下推开 80px 的距离 */;
+}
+.contact-email a {
+  color: #a31f34;
+  text-decoration: underline;
+  margin-top: 1em;
+}
+.contact-title {
+  font-size: 16px;
+  margin-top: 2em;
+}
+.research-link {
+  color: #a31f34 !important;
+  text-decoration: underline;
+}
+.intro {
+  align-items: flex-start;
+}
+.avatar {
+  flex-shrink: 0;
 }

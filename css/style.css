@@ -226,6 +226,34 @@ template {
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Cormorant-Garamond';
+  src: url("/fonts/Cormorant-Garamond/CormorantGaramond-VariableFont_wght.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant-Garamond';
+  src: url("/fonts/Cormorant-Garamond/CormorantGaramond-Italic-VariableFont_wght.woff2") format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bebas_thin';
+  src: url("/fonts/Bebas_thin/BebasNeue-Book.woff2") format('woff2');
+  font-weight: 300;
+  font-style: book;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bebas_thin';
+  src: url("/fonts/Bebas_thin/BebasNeue-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   font-family: 'eb-garamond', 'Songti SC', SimSun, serif;
 }
@@ -640,39 +668,29 @@ header .menu label {
 .profile-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 150px;
   margin-top: 40px;
 }
 .intro {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 240px;
+  gap: 200px;
 }
 .intro .avatar {
   padding: 10px;
   flex-shrink: 0;
-  transform: translateY(-5px);
+  transform: translateY(10px);
 }
 .intro .avatar img {
-  width: 260px;
+  width: 285px;
   height: auto;
-  display: block;
-  border-radius: 0;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  transition: all ease 0.4s;
-  cursor: pointer;
-}
-.intro .avatar img:hover {
-  transform: none;
 }
 .intro .intro-text {
-  max-width: 450px;
+  max-width: 600px;
   font-size: 16px;
   text-align: left;
-  padding-top: 15px;
+  padding-top: 0;
 }
 .nickname {
   font-size: 2em;
@@ -1534,9 +1552,10 @@ body.dark-theme .highlight .code .meta {
   color: #7f7f7f;
 }
 header .header-logo a {
-  font-family: "Futura", serif !important;
+  font-family: "Bebas_thin", serif !important;
   font-size: 26px;
   font-weight: 400;
+  letter-spacing: 0.08em;
 }
 header .menu a {
   font-size: 22px;
@@ -1561,4 +1580,23 @@ body:not(.home) #main {
 .pagination,
 .article-nav {
   margin-bottom: 140px !important /* 向下推开 80px 的距离 */;
+}
+.contact-email a {
+  color: #a31f34;
+  text-decoration: underline;
+  margin-top: 1em;
+}
+.contact-title {
+  font-size: 16px;
+  margin-top: 2em;
+}
+.research-link {
+  color: #a31f34 !important;
+  text-decoration: underline;
+}
+.intro {
+  align-items: flex-start;
+}
+.avatar {
+  flex-shrink: 0;
 }

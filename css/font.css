@@ -82,3 +82,31 @@
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Cormorant-Garamond';
+  src: url("/fonts/Cormorant-Garamond/CormorantGaramond-VariableFont_wght.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant-Garamond';
+  src: url("/fonts/Cormorant-Garamond/CormorantGaramond-Italic-VariableFont_wght.woff2") format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bebas_thin';
+  src: url("/fonts/Bebas_thin/BebasNeue-Book.woff2") format('woff2');
+  font-weight: 300;
+  font-style: book;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bebas_thin';
+  src: url("/fonts/Bebas_thin/BebasNeue-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
