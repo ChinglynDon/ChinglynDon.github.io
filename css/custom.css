@@ -1,8 +1,8 @@
 header .header-logo a {
-  font-family: "Bebas_thin", serif !important;
+  font-family: "Gill Sans", serif !important;
   font-size: 26px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 header .menu a {
   font-size: 22px;
@@ -31,7 +31,7 @@ body:not(.home) #main {
   margin-bottom: 140px !important /* 向下推开 80px 的距离 */;
 }
 .contact-email a {
-  color: #a31f34;
+  color: #b44;
   text-decoration: underline;
   margin-top: 1em;
 }
@@ -40,7 +40,7 @@ body:not(.home) #main {
   margin-top: 2em;
 }
 .research-link {
-  color: #a31f34 !important;
+  color: #b44 !important;
   text-decoration: underline;
 }
 .intro {

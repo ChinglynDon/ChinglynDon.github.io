@@ -110,3 +110,24 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Berkeley';
+  src: url("/fonts/ITC_Ber/ITC_Berkeley_Oldstyle_Bold.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gill Sans';
+  src: url("/fonts/Gill Sans/Gill Sans.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gill Sans';
+  src: url("/fonts/Gill Sans/Gill Sans Medium.woff2") format('woff2');
+  font-weight: 600;
+  font-style: Medium;
+  font-display: swap;
+}
