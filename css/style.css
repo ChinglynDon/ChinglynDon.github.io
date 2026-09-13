@@ -1282,6 +1282,7 @@ header .menu label {
   }
   .navbar-mobile .container .navbar-header > div:first-child > a:first-child {
     font-family: "Gill Sans", sans-serif;
+    font-weight: 600;
   }
   .navbar-mobile .container .navbar-header .menu-toggle {
     display: flex;
