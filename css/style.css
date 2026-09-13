@@ -1278,6 +1278,10 @@ header .menu label {
     padding-left: 1.5em;
     box-sizing: border-box;
     position: relative;
+/* Mobile Header font */
+  }
+  .navbar-mobile .container .navbar-header > div:first-child > a:first-child {
+    font-family: "Gill Sans", sans-serif;
   }
   .navbar-mobile .container .navbar-header .menu-toggle {
     display: flex;
