@@ -43,6 +43,21 @@ body:not(.home) #main {
   color: #750014 !important;
   text-decoration: underline;
 }
+/* 强制将 CV 页面内容中的所有超链接锁定为红色 */
+.post-content a,
+.page-content a,
+div[style*="flex"] a,
+a[href*="CV_Template.pdf"] {
+  color: #750014 !important;
+  text-decoration: underline !important;
+}
+/* 确保访问前、访问后、鼠标悬停全都是红色 */
+a[href*="CV_Template.pdf"]:link,
+a[href*="CV_Template.pdf"]:visited,
+a[href*="CV_Template.pdf"]:hover,
+a[href*="CV_Template.pdf"]:active {
+  color: #750014 !important;
+}
 .intro {
   align-items: flex-start;
 }
