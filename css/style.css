@@ -1620,9 +1620,14 @@ body:not(.home) #main {
   color: #750014 !important;
   text-decoration: underline;
 }
-.cv-link {
+.menu-item-cv a,
+.nav-item-cv a,
+a[href*="/cv"] {
+  color: #750014 !important; /* 换成你想要的红色十六进制代码，如 #e74c3c */
+}
+.nav-item-cv.active a,
+.menu-item-cv.active a {
   color: #750014 !important;
-  text-decoration: underline;
 }
 .intro {
   align-items: flex-start;
