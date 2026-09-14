@@ -31,7 +31,7 @@ body:not(.home) #main {
   margin-bottom: 140px !important /* 向下推开 80px 的距离 */;
 }
 .contact-email a {
-  color: #b44;
+  color: #a31f34;
   text-decoration: underline;
   margin-top: 1em;
 }
@@ -40,7 +40,7 @@ body:not(.home) #main {
   margin-top: 2em;
 }
 .research-link {
-  color: #b44 !important;
+  color: #a31f34 !important;
   text-decoration: underline;
 }
 .intro {
