@@ -1620,6 +1620,10 @@ body:not(.home) #main {
   color: #750014 !important;
   text-decoration: underline;
 }
+.cv-link {
+  color: #750014 !important;
+  text-decoration: underline;
+}
 .intro {
   align-items: flex-start;
 }
